@@ -40,26 +40,26 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
     public void onApplicationEvent(ApplicationReadyEvent applicationReadyEvent) {
         Organizer org1, org2, org3;
         org1 = organizerRepository.save(Organizer.builder()
-                .name("CAMT").build());
+                .name("Get first dose").build());
         org2 = organizerRepository.save(Organizer.builder()
-                .name("CMU").build());
+                .name("Get second dose").build());
         org3 = organizerRepository.save(Organizer.builder()
                 .name("ChiangMai").build());
         Event tempEvent = null;
         tempEvent = eventRepository.save(Event.builder()
                 .category("Academic")
-                .title("Midterm Exam")
+                .title("Lukas Hoffmann")
                 .description("A time for taking the exam")
-                .location("CAMT Building")
+                .location("Hospital")
                 .date("3rd Sept")
-                .time("3.00-4.00 pm.")
+                .time("3.00 pm.")
                 .petAllowed(false)
                 .organizer(org1)
                 .build());
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Academic")
-                .title("Commencement Day")
+                .title("Anna Weber")
                 .description("A time for celebration")
                 .location("CMU Convention hall")
                 .date("21th Jan")
@@ -70,7 +70,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         org1.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
-                .title("Loy Krathong")
+                .title("Jonas Fischer")
                 .description("A time for Krathong")
                 .location("Ping River")
                 .date("21th Nov")
@@ -81,7 +81,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         org2.getOwnEvents().add(tempEvent);
         tempEvent = eventRepository.save(Event.builder()
                 .category("Cultural")
-                .title("Songkran")
+                .title("Julia Wagner")
                 .description("Let's Play Water")
                 .location("Chiang Mai Moat")
                 .date("13th April")
