@@ -37,7 +37,7 @@ jobs:
         run: |    
           mkdir se331-2022-project-backend     
           cp docker-compose.yml se331-2022-project-backend/docker-compose.yml        
-          cd 331-backend         
+          cd se331-2022-project-backend   
           docker-compose -H ${{ secrets.HOST_SERVER }} down          
           docker-compose -H ${{ secrets.HOST_SERVER }} pull
           docker-compose -H ${{ secrets.HOST_SERVER }} up -d
