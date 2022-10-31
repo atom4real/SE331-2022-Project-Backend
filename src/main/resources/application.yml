@@ -16,7 +16,7 @@ spring:
 
 jwt:
   header: Authorization
-  secret: "3t6w9z$C&F)H@McQfTjWnZr4u7x!A%D*G-KaNdRgUkXp2s5v8y/B?E(H+MbQeThV"
+  secret: "3t6w9z$C&F)J@NcRfTjWnZr4u7x!A%D*G-KaPdSgVkYp2s5v8y/B?E(H+MbQeThW"
   expiration: 604800
   route:
     authentication:

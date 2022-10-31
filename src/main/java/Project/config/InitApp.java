@@ -66,6 +66,7 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
             "https://image.freepik.com/free-photo/korean-young-woman-s-half-length-portrait-female-model-white-shirt-showing-pointing-something-concept-human-emotions-facial-expression-front-view_155003-18248.jpg",
     };
 
+
     PasswordEncoder encoder = new BCryptPasswordEncoder();
 
     @Override
@@ -222,8 +223,8 @@ public class InitApp implements ApplicationListener<ApplicationReadyEvent> {
         users[8] = User.builder()
                 .username("admin")
                 .password(encoder.encode("admin"))
-                .firstname("admin1")
-                .lastname("admin1")
+                .firstname("Smith")
+                .lastname("Johnson")
                 .email("admin@admin.com")
                 .gender(Gender.NON_BI)
                 .homeTown("Admin town")
