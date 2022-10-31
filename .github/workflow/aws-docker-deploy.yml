@@ -35,7 +35,7 @@ jobs:
           tags: atom4real/se331-2022-project-backend:latest
       - name: prepare the docker-compose run
         run: |    
-          mkdir 331-backend        
+          mkdir se331-2022-project-backend     
           cp docker-compose.yml se331-2022-project-backend/docker-compose.yml        
           cd 331-backend         
           docker-compose -H ${{ secrets.HOST_SERVER }} down          
